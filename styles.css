@@ -1,0 +1,386 @@
+.whatsapp-link {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #25D366;
+    border-radius: var(--border-radius);
+}
+
+.whatsapp-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.whatsapp-link i {
+    font-size: 1.5rem;
+}
+
+.whatsapp-link:hover {
+    background-color: #128C7E;
+    transition: var(--transition);
+}
+
+
+
+
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.system-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.system-toggle button {
+    background-color: var(--light-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: bold;
+}
+
+.system-toggle button:first-child {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.system-toggle button:last-child {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.system-toggle button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+    background-color: var(--primary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.stat-info h3 {
+    font-size: 1rem;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.stat-info p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.year-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+.year-container h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-color);
+}
+
+.semester-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.semester-card {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    transition: var(--transition);
+}
+
+.semester-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.grades-container {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.grade-input {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+.grade-input label {
+    flex: 1;
+    font-weight: bold;
+}
+
+.grade-input input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.semester-stats {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.status {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.status.success {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.status.warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.status.danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.status.neutral {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.year-stats, .deug-stats {
+    background-color: var(--light-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.license-stats {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+.license-stats h2 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-color);
+}
+
+.license-details {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.locked-units-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.locked-units-container h2 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-color);
+}
+
+.locked-units-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.locked-unit-item {
+    background-color: var(--light-color);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.locked-unit-item.locked {
+    border-left: 4px solid var(--danger-color);
+}
+
+.locked-unit-item.additional {
+    border-left: 4px solid var(--secondary-color);
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: var(--dark-color);
+}
+
+/* Animation classes */
+.highlight {
+    animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: rgba(46, 204, 113, 0.3);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .semester-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .license-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .year-stats, .deug-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Special styling for dual-part courses in new system */
+.dual-part-course {
+    border: 1px dashed var(--primary-color);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.dual-part-course h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.dual-part-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.dual-part-inputs .grade-input {
+    flex: 1;
+}
+
+/* Progress bar styles */
+.progress-container {
+    width: 100%;
+    background-color: var(--light-color);
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
