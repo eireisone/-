@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام تتبع الوحدات الدراسية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>نظام تتبع الوحدات الدراسية</h1>
+            <div class="system-toggle">
+                <button id="oldSystem" class="active">النظام القديم</button>
+                <button id="newSystem">النظام الجديد</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="dashboard">
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="stat-info">
+                            <h3>المعدل العام</h3>
+                            <p id="overallAverage">0.00</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-lock-open"></i></div>
+                        <div class="stat-info">
+                            <h3>الوحدات الإضافية</h3>
+                            <p id="additionalUnits">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-lock"></i></div>
+                        <div class="stat-info">
+                            <h3>الوحدات المقفولة</h3>
+                            <p id="lockedUnits">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="stat-info">
+                            <h3>نسبة التقدم</h3>
+                            <p id="progressPercentage">0%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="semesters-container">
+                    <div class="year-container">
+                        <h2>السنة الأولى</h2>
+                        <div class="semester-cards">
+                            <div class="semester-card" id="semester1">
+                                <h3>الفصل الأول</h3>
+                                <div class="grades-container" id="semester1Grades">
+                                    <!-- Grades will be added dynamically -->
+                                </div>
+                                <div class="semester-stats">
+                                    <p>المعدل: <span id="semester1Average">0.00</span></p>
+                                    <p>الحالة: <span id="semester1Status" class="status">غير مكتمل</span></p>
+                                </div>
+                            </div>
+                            <div class="semester-card" id="semester2">
+                                <h3>الفصل الثاني</h3>
+                                <div class="grades-container" id="semester2Grades">
+                                    <!-- Grades will be added dynamically -->
+                                </div>
+                                <div class="semester-stats">
+                                    <p>المعدل: <span id="semester2Average">0.00</span></p>
+                                    <p>الحالة: <span id="semester2Status" class="status">غير مكتمل</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="year-stats">
+                            <p>معدل السنة: <span id="year1Average">0.00</span></p>
+                            <p>المعاوضة: <span id="year1Compensation" class="status">غير متاح</span></p>
+                        </div>
+                    </div>
+
+                    <div class="year-container">
+                        <h2>السنة الثانية</h2>
+                        <div class="semester-cards">
+                            <div class="semester-card" id="semester3">
+                                <h3>الفصل الثالث</h3>
+                                <div class="grades-container" id="semester3Grades">
+                                    <!-- Grades will be added dynamically -->
+                                </div>
+                                <div class="semester-stats">
+                                    <p>المعدل: <span id="semester3Average">0.00</span></p>
+                                    <p>الحالة: <span id="semester3Status" class="status">غير مكتمل</span></p>
+                                </div>
+                            </div>
+                            <div class="semester-card" id="semester4">
+                                <h3>الفصل الرابع</h3>
+                                <div class="grades-container" id="semester4Grades">
+                                    <!-- Grades will be added dynamically -->
+                                </div>
+                                <div class="semester-stats">
+                                    <p>المعدل: <span id="semester4Average">0.00</span></p>
+                                    <p>الحالة: <span id="semester4Status" class="status">غير مكتمل</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="year-stats">
+                            <p>معدل السنة: <span id="year2Average">0.00</span></p>
+                            <p>المعاوضة: <span id="year2Compensation" class="status">غير متاح</span></p>
+                        </div>
+                        <div class="deug-stats">
+                            <h3>شهادة DEUG</h3>
+                            <p>المعدل: <span id="deugAverage">0.00</span></p>
+                            <p>الحالة: <span id="deugStatus" class="status">غير مكتمل</span></p>
+                        </div>
+                    </div>
+
+                    <div class="year-container">
+                        <h2>السنة الثالثة</h2>
+                        <div class="semester-cards">
+                            <div class="semester-card" id="semester5">
+                                <h3>الفصل الخامس</h3>
+                                <div class="grades-container" id="semester5Grades">
+                                    <!-- Grades will be added dynamically -->
+                                </div>
+                                <div class="semester-stats">
+                                    <p>المعدل: <span id="semester5Average">0.00</span></p>
+                                    <p>الحالة: <span id="semester5Status" class="status">غير مكتمل</span></p>
+                                </div>
+                            </div>
+                            <div class="semester-card" id="semester6">
+                                <h3>الفصل السادس</h3>
+                                <div class="grades-container" id="semester6Grades">
+                                    <!-- Grades will be added dynamically -->
+                                </div>
+                                <div class="semester-stats">
+                                    <p>المعدل: <span id="semester6Average">0.00</span></p>
+                                    <p>الحالة: <span id="semester6Status" class="status">غير مكتمل</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="year-stats">
+                            <p>معدل السنة: <span id="year3Average">0.00</span></p>
+                            <p>المعاوضة: <span id="year3Compensation" class="status">غير متاح</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license-stats">
+                    <h2>شهادة الإجازة</h2>
+                    <div class="license-details">
+                        <p>المعدل العام: <span id="licenseAverage">0.00</span></p>
+                        <p>الحالة: <span id="licenseStatus" class="status">غير مكتمل</span></p>
+                        <p>التقدير: <span id="licenseGrade">-</span></p>
+                    </div>
+                </div>
+
+                <div class="locked-units-container">
+                    <h2>الوحدات المقفولة والإضافية</h2>
+                    <div class="locked-units-list" id="lockedUnitsList">
+                        <!-- Locked units will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2023 نظام تتبع الوحدات الدراسية</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
